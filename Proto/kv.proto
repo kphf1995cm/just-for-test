@@ -1,0 +1,30 @@
+// https://blog.csdn.net/lihao21/article/details/104138126
+// https://blog.csdn.net/bingshanzhu/article/details/97490673
+// protoc -I=D:\code\ECKV\Proto --cpp_out=D:\code\ECKV\Proto kv.proto
+
+syntax = "proto3";
+
+package kvs;
+
+service kvsvc {
+    rpc put (Request) returns (Response) {}
+    rpc get (Key) returns (Value) {}
+    rpc remove (Key) returns (Response) {}
+}
+
+message Request {
+    string key = 1;
+    string value = 2;
+}
+
+message Response {
+    int32 res = 1;
+}
+
+message Key {
+    string key = 1;
+}
+
+message Value {
+    string value = 1;
+}
