@@ -18,6 +18,7 @@ int ApiGroup::put(const std::string &key, const std::string &value){
     std::vector<std::string> vals=split(value,p_storage->dataNodeNum);
     // Call EC to Encode
     
+    
 
     return 0;
 }
