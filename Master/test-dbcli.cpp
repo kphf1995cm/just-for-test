@@ -1,6 +1,8 @@
 #include<iostream>
 #include"dbcli.h"
 
+// g++ main.cpp MyDB.cpp -o main `mysql_config --cflags --libs`
+
 int main()
 {
     DbCli db; 
